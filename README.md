@@ -23,7 +23,6 @@ Soy un desarrollador y líder de proyectos en formación, enfocado en transforma
 <p align="center">
 <b>Lenguajes de Programación</b><br/>
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-<img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++"/>
 <br/><br/>
 <b>IA & Machine Learning</b><br/>
 <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"/>
