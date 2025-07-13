@@ -74,7 +74,7 @@ Logros:
 
 
 <p align="center">
-<img src="img/campeon1.png" width="600">
+<img src="img/campeoon.png" width="600">
 </p>
 
 
