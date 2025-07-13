@@ -1,13 +1,14 @@
 <p align="center">
-  <img src="img/banner.svg" width="100%">
+<!-- Asegúrate de que tu banner.svg esté en una carpeta llamada 'assets' en tu repositorio -->
+<img src="img/banner.svg" width="100%">
 </p>
 
 <h1 align="center">👋 ¡Hola! Soy Joel Sebastián Morales Játiva</h1>
 <h3 align="center">Estudiante de Ingeniería en TI | Apasionado por la IA, el Desarrollo y la Robótica</h3>
 
 <p align="center">
-<a href="https://www.google.com/search?q=https://www.linkedin.com/in/j03l1725/" target="_blank">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/LinkedIn-0077B5%3Fstyle%3Dfor-the-badge%26logo%3Dlinkedin%26logoColor%3Dwhite" alt="LinkedIn"/>
+<a href="https://www.linkedin.com/in/j03l1725/" target="_blank">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
 <a href="mailto:joelsebastian1725@gmail.com">
 <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
@@ -18,36 +19,28 @@
 Soy un desarrollador y líder de proyectos en formación, enfocado en transformar ideas complejas en soluciones tecnológicas funcionales. Me especializo en <b>Inteligencia Artificial</b> y <b>Machine Learning</b>, y me encanta enfrentar desafíos que me permitan crecer y aportar valor. ¡Bienvenido a mi portafolio!
 </p>
 
-<h2 align="center">📊 Mis Estadísticas en GitHub</h2>
-<p align="center">
-<!-- ¡IMPORTANTE! Reemplaza 'j03l1725' con tu nombre de usuario exacto de GitHub en los dos enlaces de abajo. -->
-<img align="center" src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api%3Fusername%3Dj03l1725%26show_icons%3Dtrue%26locale%3Des%26theme%3Dtokyonight%26count_private%3Dtrue" alt="Estadísticas de Joel en GitHub" />
-<br/><br/>
-<img align="center" src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api/top-langs%3Fusername%3Dj03l1725%26layout%3Dcompact%26locale%3Des%26theme%3Dtokyonight" alt="Lenguajes más usados por Joel" />
-</p>
-
 <h2 align="center">🛠️ Tecnologías y Herramientas</h2>
 <p align="center">
 <b>Lenguajes de Programación</b><br/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Python-3776AB%3Fstyle%3Dfor-the-badge%26logo%3Dpython%26logoColor%3Dwhite" alt="Python"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/C%252B%252B-00599C%3Fstyle%3Dfor-the-badge%26logo%3Dc%252B%252B%26logoColor%3Dwhite" alt="C++"/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+<img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++"/>
 <br/><br/>
 <b>IA & Machine Learning</b><br/>
 <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"/>
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/scikit--learn-F7931E%3Fstyle%3Dfor-the-badge%26logo%3Dscikit-learn%26logoColor%3Dwhite" alt="Scikit-learn"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Pandas-150458%3Fstyle%3Dfor-the-badge%26logo%3Dpandas%26logoColor%3Dwhite" alt="Pandas"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Numpy-013243%3Fstyle%3Dfor-the-badge%26logo%3Dnumpy%26logoColor%3Dwhite" alt="Numpy"/>
+<img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-learn"/>
+<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
+<img src="https://img.shields.io/badge/Numpy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="Numpy"/>
 <br/><br/>
 <b>Herramientas y Plataformas</b><br/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Google%2520Colab-F9AB00%3Fstyle%3Dfor-the-badge%26logo%3Dgooglecolab%26logoColor%3Dblack" alt="Google Colab"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Jupyter-F37626%3Fstyle%3Dfor-the-badge%26logo%3Djupyter%26logoColor%3Dwhite" alt="Jupyter"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Docker-2496ED%3Fstyle%3Dfor-the-badge%26logo%3Ddocker%26logoColor%3Dwhite" alt="Docker"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Git-F05032%3Fstyle%3Dfor-the-badge%26logo%3Dgit%26logoColor%3Dwhite" alt="Git"/>
+<img src="https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=black" alt="Google Colab"/>
+<img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter"/>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
 <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
 <br/><br/>
 <b>Redes y Simulación</b><br/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Cisco-1BA0D7%3Fstyle%3Dfor-the-badge%26logo%3Dcisco%26logoColor%3Dwhite" alt="Cisco Packet Tracer"/>
+<img src="https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco Packet Tracer"/>
 </p>
 
 <h2 align="center">🚀 Proyectos Destacados</h2>
@@ -63,7 +56,7 @@ Logros:
 
 <p align="center">
 <!-- Asegúrate de que tu imagen 'campeon1.png' esté en una carpeta llamada 'assets' -->
-<img src="assets/campeoon.png" width="600">
+<img src="img/campeoon.png" width="600">
 </p>
 
 💻 2. Proyecto "Diseño Generativo" - Colaboración con PUCE
