@@ -2,10 +2,6 @@
   <img src="img/banner.svg" width="100%">
 </p>
 
-<p align="center">
-<img src="https://www.google.com/search?q=https://arturssmirnovs.github.io/github-profile-readme-generator/images/header.gif" width="100%">
-</p>
-
 <h1 align="center">👋 ¡Hola! Soy Joel Sebastián Morales Játiva</h1>
 <h3 align="center">Estudiante de Ingeniería en TI | Apasionado por la IA, el Desarrollo y la Robótica</h3>
 
@@ -22,20 +18,13 @@
 Soy un desarrollador y líder de proyectos en formación, enfocado en transformar ideas complejas en soluciones tecnológicas funcionales. Me especializo en <b>Inteligencia Artificial</b> y <b>Machine Learning</b>, y me encanta enfrentar desafíos que me permitan crecer y aportar valor. ¡Bienvenido a mi portafolio!
 </p>
 
-<!--
-ESTADÍSTICAS DE GITHUB Estas tarjetas se actualizan solas. ¡IMPORTANTE! Reemplaza 'j03l1725' con tu nombre de usuario exacto de GitHub en los dos enlaces de abajo. Puedes personalizar los temas aquí: https://www.google.com/search?q=https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
--->
-
 <h2 align="center">📊 Mis Estadísticas en GitHub</h2>
 <p align="center">
+<!-- ¡IMPORTANTE! Reemplaza 'j03l1725' con tu nombre de usuario exacto de GitHub en los dos enlaces de abajo. -->
 <img align="center" src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api%3Fusername%3Dj03l1725%26show_icons%3Dtrue%26locale%3Des%26theme%3Dtokyonight%26count_private%3Dtrue" alt="Estadísticas de Joel en GitHub" />
 <br/><br/>
 <img align="center" src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api/top-langs%3Fusername%3Dj03l1725%26layout%3Dcompact%26locale%3Des%26theme%3Dtokyonight" alt="Lenguajes más usados por Joel" />
 </p>
-
-<!--
-HABILIDADES TÉCNICAS (CON INSIGNIAS) Usamos Shields.io para crear estas insignias. Puedes buscar más iconos y personalizar los colores aquí: https://simpleicons.org/
--->
 
 <h2 align="center">🛠️ Tecnologías y Herramientas</h2>
 <p align="center">
@@ -72,11 +61,10 @@ Logros:
 
 🥉 3er Lugar - Categoría ROBO ONE light Combate.
 
-
 <p align="center">
-<img src="img/campeoon.png" width="600">
+<!-- Asegúrate de que tu imagen 'campeon1.png' esté en una carpeta llamada 'assets' -->
+<img src="assets/campeoon.png" width="600">
 </p>
-
 
 💻 2. Proyecto "Diseño Generativo" - Colaboración con PUCE
 Actualmente, coordino un equipo en un proyecto de prácticas colaborativas con la PUCE. Nuestro objetivo es desarrollar un modelo de IA capaz de generar filtros faciales realistas para simular el envejecimiento y el deterioro de la salud.
