@@ -1,18 +1,21 @@
 <div align="center">
 <img src="img/banner.svg" alt="Banner de Portafolio" width="100%"/>
-<h1><b>Joel V.</b></h1>
 <h3>Estudiante de Ingeniería en TI | Apasionado por la IA, el Desarrollo y la Robótica</h3>
 
 
-<a href="https://www.linkedin.com/in/j03l1725/" target="_blank"><img src="https://www.google.com/search?q=https://img.shields.io/badge/LinkedIn-5865F2%3Fstyle%3Dfor-the-badge%26logo%3Dlinkedin%26logoColor%3Dwhite" alt="LinkedIn"/></a>
+<a href="https://www.linkedin.com/in/j03l1725/" target="_blank">
+
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+
+</a>
 
 </div>
 
 <p align="center">
-Soy un desarrollador y futuro líder de proyectos con una profunda pasión por la tecnología. Mi objetivo es especializarme en <b>Inteligencia Artificial</b> y <b>Machine Learning</b> para crear soluciones que no solo sean funcionales, sino que también aporten valor real. Me encantan los desafíos y estoy en constante aprendizaje para llevar mis habilidades al siguiente nivel. ¡Bienvenido a mi espacio digital!
+Soy un apasionado por la IA y líder de proyectos en formación, enfocado en transformar ideas complejas en soluciones tecnológicas funcionales. Me interesa especializarme en <b>Inteligencia Artificial</b> y <b>Machine Learning</b>, y me encanta enfrentar desafíos que me permitan crecer y aportar valor. ¡Bienvenido a mi portafolio!
 </p>
 
-<h2 align="center">🚀 Arsenal Tecnológico</h2>
+<h2 align="center">Tecnologías y Herramientas en aprendizaje</h2>
 
 <table width="100%">
 <tr>
@@ -40,7 +43,7 @@ Soy un desarrollador y futuro líder de proyectos con una profunda pasión por l
 </tr>
 </table>
 
-<h2 align="center">🏆 Proyectos Destacados</h2>
+<h2 align="center">Proyectos Destacados</h2>
 
 <!-- Proyecto 1: KUNTUR -->
 
@@ -106,5 +109,5 @@ Soy un desarrollador y futuro líder de proyectos con una profunda pasión por l
 </table>
 
 <p align="center">
-<sub>Hecho con ❤️ y mucho ☕</sub>
+<sub>☕</sub>
 </p>
