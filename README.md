@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-Soy un apasionado por la IA y líder de proyectos en formación, enfocado en transformar ideas complejas en soluciones tecnológicas funcionales. Me intereza especializarme en <b>Inteligencia Artificial</b> y <b>Machine Learning</b>, y me encanta enfrentar desafíos que me permitan crecer y aportar valor. ¡Bienvenido a mi portafolio!
+Soy un apasionado por la IA y líder de proyectos en formación, enfocado en transformar ideas complejas en soluciones tecnológicas funcionales. Me interesa especializarme en <b>Inteligencia Artificial</b> y <b>Machine Learning</b>, y me encanta enfrentar desafíos que me permitan crecer y aportar valor. ¡Bienvenido a mi portafolio!
 </p>
 
 <h2 align="center">🛠️ Tecnologías y Herramientas en aprendizaje</h2>
