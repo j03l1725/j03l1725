@@ -3,23 +3,19 @@
 <img src="img/banner.svg" width="100%">
 </p>
 
-<h1 align="center">👋 ¡Hola! Soy Joel Sebastián Morales Játiva</h1>
 <h3 align="center">Estudiante de Ingeniería en TI | Apasionado por la IA, el Desarrollo y la Robótica</h3>
 
 <p align="center">
 <a href="https://www.linkedin.com/in/j03l1725/" target="_blank">
 <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
-<a href="mailto:joelsebastian1725@gmail.com">
-<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
-</a>
 </p>
 
 <p align="center">
-Soy un desarrollador y líder de proyectos en formación, enfocado en transformar ideas complejas en soluciones tecnológicas funcionales. Me especializo en <b>Inteligencia Artificial</b> y <b>Machine Learning</b>, y me encanta enfrentar desafíos que me permitan crecer y aportar valor. ¡Bienvenido a mi portafolio!
+Soy un apasionado por la IA y líder de proyectos en formación, enfocado en transformar ideas complejas en soluciones tecnológicas funcionales. Me intereza especializarme en <b>Inteligencia Artificial</b> y <b>Machine Learning</b>, y me encanta enfrentar desafíos que me permitan crecer y aportar valor. ¡Bienvenido a mi portafolio!
 </p>
 
-<h2 align="center">🛠️ Tecnologías y Herramientas</h2>
+<h2 align="center">🛠️ Tecnologías y Herramientas en aprendizaje</h2>
 <p align="center">
 <b>Lenguajes de Programación</b><br/>
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
@@ -65,12 +61,10 @@ Mi Rol:
 
 Soy el responsable técnico del desarrollo del modelo, utilizando IA Generativa y entrenando los algoritmos en Google Colab.
 
-<!--
-Ejemplo de cómo añadir una imagen o GIF:
 <p align="center">
-<img src="assets/diseno_generativo.gif" width="600">
+<img src="img/samay.png" width="600">
 </p>
--->
+
 
 🌐 3. Servidor "Colmena" - Proyecto Red de Comunicadoras (CORAPE)
 Fui el jefe técnico en la implementación de una unidad móvil de podcasting para operar en comunidades de la Amazonía sin acceso a internet. El desafío era enorme: crear una solución tecnológica robusta, offline y fácil de usar para las comunicadoras locales.
@@ -83,9 +77,6 @@ Despliegue de la plataforma "Colmena" usando Docker y PostgreSQL.
 
 Diagnóstico de errores y capacitación a las usuarias en Puyo y Sarayaku.
 
-<!--
-Ejemplo de cómo añadir una imagen o GIF:
 <p align="center">
-<img src="assets/corape_taller.jpg" width="600">
+<img src="img/corape_taller.png" width="600">
 </p>
--->
