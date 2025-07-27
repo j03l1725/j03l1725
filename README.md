@@ -54,8 +54,8 @@ Soy un apasionado por la IA y líder de proyectos en formación, enfocado en tra
 <p>Como Presidente del Club de Programación y Robótica, lideré el diseño y construcción del robot humanoide KUNTUR para el torneo <b>ROBO ONE Ecuador</b>. Este proyecto fue una prueba intensiva de habilidades técnicas, trabajo en equipo y resolución de problemas bajo presión.</p>
 <h4><b>Logros Clave:</b></h4>
 <ul>
-<li>🏆 <b>1er Lugar</b> - Categoría ROBO ONE light PERFORMANCE.</li>
-<li>🥉 <b>3er Lugar</b> - Categoría ROBO ONE light Combate.</li>
+<li> <b>1er Lugar</b> - Categoría ROBO ONE light PERFORMANCE.</li>
+<li> <b>3er Lugar</b> - Categoría ROBO ONE light Combate.</li>
 </ul>
 </td>
 <td width="35%" align="center">
