@@ -75,7 +75,7 @@ Soy un apasionado por la IA y líder de proyectos en formación, enfocado en tra
 </td>
 <td width="65%" valign="top" style="padding-left: 20px;">
 <h3><b>2. IA Generativa para Filtros Faciales</b></h3>
-<p>Actualmente, coordino un equipo en un proyecto de prácticas colaborativas con la PUCE. El objetivo es desarrollar un modelo de <b>IA capaz de generar filtros faciales realistas</b> para simular el envejecimiento y el deterioro de la salud, un reto fascinante en el campo de la IA Generativa.</p>
+<p>Fui el Coordinador de equipo en un proyecto de prácticas colaborativas con la Universidad Católica del Ecuador. El objetivo es desarrollar un modelo de <b>IA capaz de generar filtros faciales realistas</b> para simular el envejecimiento y el deterioro de la salud, un reto fascinante en el campo de la IA Generativa.</p>
 <h4><b>Mi Rol:</b></h4>
 <ul>
 <li>Líder técnico del desarrollo del modelo.</li>
