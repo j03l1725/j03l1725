@@ -21,8 +21,8 @@ REPO = Path(__file__).resolve().parent.parent
 # Metricas de la grilla monoespaciada. Courier New y los monospace de fallback
 # avanzan 0.6 em por caracter: de ahi salen todas las posiciones.
 ADVANCE = 0.6
-ASCII_FS = 11.0
-ASCII_LH = 13.2
+ASCII_FS = 13.0
+ASCII_LH = 15.6
 PANEL_FS = 13.5
 PANEL_LH = 19.5
 
@@ -161,7 +161,7 @@ def render(profile: dict, ascii_art: list[str], theme_name: str, today: date) ->
     add(
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width:.0f}" height="{height:.0f}" '
         f'viewBox="0 0 {width:.0f} {height:.0f}" role="img" '
-        f'aria-label="Terminal con el retrato ASCII y el perfil de {escape(profile["blocks"][0]["text"])}">'
+        f'aria-label="Terminal con el retrato ASCII y el perfil de {escape(profile["user"])}@{escape(profile["host"])}">'
     )
 
     # --- estilos y animacion -------------------------------------------------

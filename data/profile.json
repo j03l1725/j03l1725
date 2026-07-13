@@ -8,18 +8,17 @@
   },
   "blocks": [
     {
-      "type": "head",
-      "text": "Joel Sebastián Morales Játiva"
-    },
-    {
       "type": "kv",
       "items": [
         ["Role", "Co-Founder & CTO @ INSIDEEBB"],
+        ["Work", "Ingeniero en centro de IA"],
         ["Host", "Quito, Ecuador"],
-        ["Kernel", "Ingeniería en TI — U. Indoamérica (in progress)"],
-        ["Uptime", "{{leading_teams}} liderando equipos técnicos"],
-        ["Shell", "bash / zsh on Linux"],
-        ["IDE", "VS Code, Cursor, Neovim"]
+        ["Kernel", "Ingeniero en TI — IA"],
+        ["OS", "Linux"],
+        ["IDE", "VS Code, Antigravity"],
+        ["Hobby", "Videojuegos"],
+        ["Battery", "22%"],
+        ["Learning", "Deep Learning avanzado"]
       ]
     },
     {
@@ -29,7 +28,7 @@
         ["Languages.Frameworks", "NestJS, Next.js, React, FastAPI, Three.js"],
         ["Languages.AI", "RAG, agentes autónomos, Gemini, OpenAI, Whisper"],
         ["Languages.Infra", "Docker, PostgreSQL, CI/CD, Coolify, Cloudflare R2"],
-        ["Languages.Real", "Español (nativo), English (technical)"]
+        ["Languages.Real", "Español, English"]
       ]
     },
     {
@@ -40,7 +39,6 @@
       "type": "kv",
       "items": [
         ["1st place", "ROBO ONE Ecuador — humanoide KUNTUR (+ 3ro en combate)"],
-        ["Research", "artículo indexado en Scopus (2024)"],
         ["Public sector", "MINTEL — Observatorio Ecuador Digital"],
         ["Impact", "servidores offline para comunicadoras de la Amazonía"],
         ["Speaker", "FLISOL 2024 · Interculturalidad UTI 2025 · Ingenia X 2026"]
@@ -54,8 +52,9 @@
       "type": "kv",
       "items": [
         ["Email", "joelsebastian1725@gmail.com"],
+        ["Email.work", "joelm@insideebb.com"],
         ["LinkedIn", "in/j03l1725"],
-        ["Focus", "construyendo agentes de IA que sí llegan a producción"]
+        ["Web", "insideebb.com"]
       ]
     }
   ]
