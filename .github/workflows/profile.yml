@@ -1,0 +1,44 @@
+name: Regenerar terminal del perfil
+
+on:
+  schedule:
+    # Todos los dias a las 06:00 UTC (01:00 en Quito).
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/profile.json"
+      - "assets/ascii_portrait.txt"
+      - "scripts/build_svg.py"
+      - ".github/workflows/profile.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Sin dependencias: build_svg.py solo usa la libreria estandar.
+      - name: Generar SVG
+        run: python3 scripts/build_svg.py
+
+      - name: Commit si cambio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add img/terminal-dark.svg img/terminal-light.svg
+          # Los contadores solo cambian de mes en mes: la mayoria de los dias no hay nada que commitear.
+          if git diff --staged --quiet; then
+            echo "Sin cambios en el terminal."
+          else
+            git commit -m "chore: regenerar terminal del perfil"
+            git push
+          fi

@@ -1,0 +1,62 @@
+{
+  "user": "joel",
+  "host": "github",
+  "title": "joel@github: ~/profile",
+  "milestones": {
+    "leading_teams_since": "2024-05-01",
+    "cto_since": "2026-01-01"
+  },
+  "blocks": [
+    {
+      "type": "head",
+      "text": "Joel Sebastián Morales Játiva"
+    },
+    {
+      "type": "kv",
+      "items": [
+        ["Role", "Co-Founder & CTO @ INSIDEEBB"],
+        ["Host", "Quito, Ecuador"],
+        ["Kernel", "Ingeniería en TI — U. Indoamérica (in progress)"],
+        ["Uptime", "{{leading_teams}} liderando equipos técnicos"],
+        ["Shell", "bash / zsh on Linux"],
+        ["IDE", "VS Code, Cursor, Neovim"]
+      ]
+    },
+    {
+      "type": "kv",
+      "items": [
+        ["Languages.Programming", "TypeScript, Python, JavaScript"],
+        ["Languages.Frameworks", "NestJS, Next.js, React, FastAPI, Three.js"],
+        ["Languages.AI", "RAG, agentes autónomos, Gemini, OpenAI, Whisper"],
+        ["Languages.Infra", "Docker, PostgreSQL, CI/CD, Coolify, Cloudflare R2"],
+        ["Languages.Real", "Español (nativo), English (technical)"]
+      ]
+    },
+    {
+      "type": "rule",
+      "text": "Highlights"
+    },
+    {
+      "type": "kv",
+      "items": [
+        ["1st place", "ROBO ONE Ecuador — humanoide KUNTUR (+ 3ro en combate)"],
+        ["Research", "artículo indexado en Scopus (2024)"],
+        ["Public sector", "MINTEL — Observatorio Ecuador Digital"],
+        ["Impact", "servidores offline para comunicadoras de la Amazonía"],
+        ["Speaker", "FLISOL 2024 · Interculturalidad UTI 2025 · Ingenia X 2026"]
+      ]
+    },
+    {
+      "type": "rule",
+      "text": "Contact"
+    },
+    {
+      "type": "kv",
+      "items": [
+        ["Email", "joelsebastian1725@gmail.com"],
+        ["LinkedIn", "in/j03l1725"],
+        ["Focus", "construyendo agentes de IA que sí llegan a producción"]
+      ]
+    }
+  ]
+}

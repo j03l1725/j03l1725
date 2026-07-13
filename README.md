@@ -1,47 +1,19 @@
 <div align="center">
-<img src="img/banner.svg" alt="Banner de Portafolio" width="100%"/>
-<h3>Estudiante de Ingeniería en TI | Apasionado por la IA, el Desarrollo y la Robótica</h3>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/terminal-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="img/terminal-light.svg">
+  <img src="img/terminal-dark.svg" alt="Terminal con el retrato ASCII y el perfil de Joel Sebastián Morales Játiva" width="100%">
+</picture>
 
-<a href="https://www.linkedin.com/in/j03l1725/" target="_blank">
-
-<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-
-</a>
+<a href="https://www.linkedin.com/in/j03l1725/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="mailto:joelsebastian1725@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 
 </div>
 
 <p align="center">
-Soy un apasionado por la IA y líder de proyectos en formación, enfocado en transformar ideas complejas en soluciones tecnológicas funcionales. Me interesa especializarme en <b>Inteligencia Artificial</b> y <b>Machine Learning</b>, y me encanta enfrentar desafíos que me permitan crecer y aportar valor. ¡Bienvenido a mi portafolio!
+Co-Founder & CTO en <b>INSIDEEBB</b>, donde construyo plataformas SaaS con agentes de IA que llegan a producción. Me muevo entre la <b>IA aplicada</b>, el <b>desarrollo full stack</b> y la <b>robótica</b>, y disfruto liderando equipos técnicos que resuelven problemas reales.
 </p>
-
-<h2 align="center">Tecnologías y Herramientas en aprendizaje</h2>
-
-<table width="100%">
-<tr>
-<td align="center" width="33%">
-<h4><b>Lenguajes de Programación</b></h4>
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-</td>
-<td align="center" width="33%">
-<h4><b>IA & Machine Learning</b></h4>
-<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"/>
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/>
-<img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-learn"/>
-<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
-<img src="https://img.shields.io/badge/Numpy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="Numpy"/>
-</td>
-<td align="center" width="33%">
-<h4><b>Herramientas y Plataformas</b></h4>
-<img src="https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=black" alt="Google Colab"/>
-<img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter"/>
-<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
-<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
-<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
-<img src="https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco Packet Tracer"/>
-</td>
-</tr>
-</table>
 
 <h2 align="center">Proyectos Destacados</h2>
 
@@ -109,5 +81,5 @@ Soy un apasionado por la IA y líder de proyectos en formación, enfocado en tra
 </table>
 
 <p align="center">
-<sub>☕</sub>
+<sub>El terminal de arriba se regenera solo cada día · <code>scripts/build_svg.py</code></sub>
 </p>
