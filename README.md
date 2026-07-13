@@ -15,7 +15,7 @@
 <br><br>
 <code>KUNTUR</code><br>
 <sub><b>Robot Humanoide</b> · ROBO ONE Ecuador</sub><br>
-<sub>🏆 1° Performance · 🥉 3° Combate</sub>
+<sub>1° Performance · 3° Combate</sub>
 </td>
 <td width="33%" align="center" valign="top">
 <img src="img/samay.png" width="100%" style="border-radius: 12px;">
