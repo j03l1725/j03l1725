@@ -1,1 +1,6 @@
-__pycache__/
+# Imagenes fuente (solo se usan para regenerar el ASCII a mano)
+assets/avatar.png
+assets/avatar-cutout.png
+
+# Script manual de generacion ASCII
+scripts/generate_ascii.py
