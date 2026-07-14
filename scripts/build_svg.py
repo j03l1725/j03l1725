@@ -23,8 +23,8 @@ REPO = Path(__file__).resolve().parent.parent
 ADVANCE = 0.6
 ASCII_FS = 13.0
 ASCII_LH = 15.6
-PANEL_FS = 13.5
-PANEL_LH = 19.5
+PANEL_FS = 15.0
+PANEL_LH = 21.5
 
 PAD = 28.0
 TITLEBAR = 36.0
