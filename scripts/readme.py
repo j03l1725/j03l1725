@@ -12,7 +12,7 @@ NADA = 'img/nada.png'
 
 
 def fuente(media, ruta):
-    return f'  <source media="{" and ".join(media)}" srcset="{ruta}">'
+    return f'<source media="{" and ".join(media)}" srcset="{ruta}">'
 
 
 def variante(nombre, alt, excluir, attrs=''):
@@ -23,9 +23,11 @@ def variante(nombre, alt, excluir, attrs=''):
     ganaba la primera, la vertical y quieta (medido el 2026-10-31). La fuente de `excluir` no nombra el tema y GitHub no
     la toca. Sin width: la versión buena se reduce sola al ancho de la columna y el píxel no ocupa una fila entera.
     """
-    s = ([f'  <source media="{excluir}" srcset="{NADA}">'] if excluir else [])
+    attrs = f'{attrs} ' if attrs else ''
+    s = ([f'<source media="{excluir}" srcset="{NADA}">'] if excluir else [])
     s += [fuente([CLARO], f'img/claro/{nombre}.webp'), fuente([OSCURO], f'img/oscuro/{nombre}.webp')]
-    return '<picture>\n' + '\n'.join(s) + f'\n  <img src="img/oscuro/{nombre}.webp" {attrs} alt="{alt}">\n</picture>'
+    # Todo en una línea: GitHub subraya los enlaces, y un salto de línea dentro de <a> se ve como una raya junto a la imagen.
+    return '<picture>' + ''.join(s) + f'<img src="img/oscuro/{nombre}.webp" {attrs}alt="{alt}"></picture>'
 
 
 def imagen(nombre, alt, attrs):
@@ -46,7 +48,7 @@ def banner(alt):
     return ''.join([variante('t-insideebb', alt, ESTRECHO), variante('t-insideebb-movil', '', ANCHO)])
 
 
-BOTONES = [('https://joelsphere.com', 'b-web', 'joelsphere.com'), ('https://insideebb.com', 'b-insideebb', 'INSIDEEBB'),
+BOTONES = [('https://joelsphere.com', 'b-joelsphere', 'joelsphere.com'), ('https://insideebb.com', 'b-insideebb', 'INSIDEEBB'),
            ('https://www.linkedin.com/in/j03l1725', 'b-linkedin', 'LinkedIn'), ('https://x.com/j03l1725', 'b-x', 'X'),
            ('https://www.instagram.com/joel.morales03_/', 'b-instagram', 'Instagram'),
            ('https://orcid.org/0009-0009-9661-8529', 'b-orcid', 'ORCID'), (f'mailto:{CORREO}', 'b-correo', f'Correo: {CORREO}')]
@@ -62,9 +64,7 @@ tarjetas = '\n'.join(f'<a href="{u}">{imagen(n, a, "width=" + chr(34) + "414" + 
 HERO_ALT = 'Joel Morales. Lo difícil de la IA es que funcione de verdad. Cofundador de INSIDEEBB. Youth Envoy de la UIT para las Américas.'
 BANNER_ALT = 'INSIDEEBB. Desarrollamos software y capacitamos a los equipos que lo usan. Plataformas, sistemas a medida e inteligencia artificial integrados a la operación de cada empresa.'
 
-(REPO / 'README.md').write_text(f"""<a href="https://joelsphere.com">
-{cabecera(HERO_ALT)}
-</a>
+(REPO / 'README.md').write_text(f"""<a href="https://joelsphere.com">{cabecera(HERO_ALT)}</a>
 
 <p>
 {botones}
@@ -74,9 +74,7 @@ Construyo software que entra en operación: plataformas, agentes de IA e infraes
 
 ## Hoy
 
-<a href="https://insideebb.com">
-{banner(BANNER_ALT)}
-</a>
+<a href="https://insideebb.com">{banner(BANNER_ALT)}</a>
 
 - **[INSIDEEBB](https://insideebb.com), cofundador.** Desarrollo de software, inteligencia artificial aplicada y capacitación de equipos. [Bizzio](https://bizzio.shop) es nuestra plataforma de comercio electrónico con IA.
 - **[UIT, Generation Connect Américas]({UIT}), Youth Envoy 2026-2030.** Represento a Ecuador en el programa de juventud de la agencia de las Naciones Unidas para las tecnologías digitales.

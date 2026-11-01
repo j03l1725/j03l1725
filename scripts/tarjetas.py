@@ -41,7 +41,7 @@ p{{margin:0;font-size:14px;line-height:1.42;color:{t['p']}}}
 .bm .co{{position:absolute;left:0;top:-3px;height:126px}}
 .bt{{display:inline-flex;align-items:center;gap:8px;height:42px;box-sizing:border-box;padding:0 15px 0 13px;border:1px solid {t['b']};border-radius:10px;background:{t['f']};color:{t['h']};font-size:14.5px;font-weight:600}}
 .bt svg,.bt img{{width:18px;height:18px;display:block}}
-.bt img.fav{{width:22px;height:22px;margin:-2px}}
+.bt img.fav{{width:27px;height:27px;margin:-5px -3px -5px -4px}}
 </style>"""
 
 
@@ -78,6 +78,8 @@ BOTONES = [('web', 'joelsphere.com'), ('insideebb', 'INSIDEEBB'), ('linkedin', '
 
 
 def pieza(tmp, tema, nombre, cuerpo, w=900, h=400, q=86):
+    if os.environ.get('SOLO') and nombre != os.environ['SOLO']:
+        return
     t = TEMAS[tema]; d = REPO / 'img' / tema; d.mkdir(exist_ok=True)
     f = Path(tmp) / f'{tema}-{nombre}.html'; p = Path(tmp) / f'{tema}-{nombre}.png'
     f.write_text(base(t) + f'<body><div id="pieza" style="display:inline-block">{cuerpo}</div></body>')
@@ -98,7 +100,7 @@ def main():
                 pieza(tmp, tema, n, f'<div class="tj"><div class="im" style="{est}"></div><div class="tx"><h3>{tit}</h3><p>{txt}</p></div></div>')
             for i, txt in BOTONES:
                 ic = ICONOS[i].replace('SIM', t['sim']).replace('FONDO', t['f'])
-                pieza(tmp, tema, f'b-{i}', f'<div class="bt">{ic}<span>{txt}</span></div>', 300, 80, 92)
+                pieza(tmp, tema, 'b-joelsphere' if i == 'web' else f'b-{i}', f'<div class="bt">{ic}<span>{txt}</span></div>', 300, 80, 92)
             print(tema, 'hecho', flush=True)
 
 
