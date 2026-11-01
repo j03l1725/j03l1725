@@ -6,29 +6,44 @@ REPO = Path(__file__).resolve().parent.parent
 UIT = 'https://www.itu.int/generationconnect/generation-connect-americas-youth-envoys-gc-ams-2026-2030/'
 CORREO = 'joelm@insideebb.com'
 CLARO, OSCURO = '(prefers-color-scheme: light)', '(prefers-color-scheme: dark)'
-ESTRECHO, QUIETO = '(max-width: 640px)', '(prefers-reduced-motion: reduce)'
+ESTRECHO, ANCHO = '(max-width: 640px)', '(min-width: 641px)'
+QUIETO, MOVIDO = '(prefers-reduced-motion: reduce)', '(prefers-reduced-motion: no-preference)'
+NADA = 'img/nada.png'
 
 
 def fuente(media, ruta):
     return f'  <source media="{" and ".join(media)}" srcset="{ruta}">'
 
 
-def imagen(nombre, alt, attrs, movil=None):
-    """Claro y oscuro; con `movil`, además su versión estrecha."""
-    s = []
-    if movil:
-        s += [fuente([tm, ESTRECHO], f'img/{t}/{movil}.webp') for t, tm in (('claro', CLARO), ('oscuro', OSCURO))]
-    s += [fuente([tm], f'img/{t}/{nombre}.webp') for t, tm in (('claro', CLARO), ('oscuro', OSCURO))]
+def variante(nombre, alt, excluir, attrs=''):
+    """Un <picture> que solo se ve fuera de `excluir`: ahí carga un píxel transparente.
+
+    Con el tema fijado en la cuenta, themed-picture de GitHub reescribe el media de toda fuente que nombre
+    prefers-color-scheme y la deja siempre activa, así que un media combinado con el ancho deja de valer: en escritorio
+    ganaba la primera, la vertical y quieta (medido el 2026-10-31). La fuente de `excluir` no nombra el tema y GitHub no
+    la toca. Sin width: la versión buena se reduce sola al ancho de la columna y el píxel no ocupa una fila entera.
+    """
+    s = ([f'  <source media="{excluir}" srcset="{NADA}">'] if excluir else [])
+    s += [fuente([CLARO], f'img/claro/{nombre}.webp'), fuente([OSCURO], f'img/oscuro/{nombre}.webp')]
     return '<picture>\n' + '\n'.join(s) + f'\n  <img src="img/oscuro/{nombre}.webp" {attrs} alt="{alt}">\n</picture>'
 
 
+def imagen(nombre, alt, attrs):
+    return variante(nombre, alt, None, attrs)
+
+
 def cabecera(alt):
-    s = []
-    for extra, sufijo in (([QUIETO], '-quieto'), ([], '')):
-        for estrecho, nombre in (([ESTRECHO], 'hero-vertical'), ([], 'hero')):
-            for t, tm in (('claro', CLARO), ('oscuro', OSCURO)):
-                s.append(fuente([tm] + extra + estrecho, f'img/{t}/{nombre}{sufijo}.webp'))
-    return '<picture>\n' + '\n'.join(s) + f'\n  <img src="img/oscuro/hero.webp" width="100%" alt="{alt}">\n</picture>'
+    # El texto alternativo va en una sola: las cuatro están siempre en el documento y se leería cuatro veces.
+    return ''.join([
+        variante('hero', alt, f'{ESTRECHO}, {QUIETO}'),
+        variante('hero-vertical', '', f'{ANCHO}, {QUIETO}'),
+        variante('hero-quieto', '', f'{ESTRECHO}, {MOVIDO}'),
+        variante('hero-vertical-quieto', '', f'{ANCHO}, {MOVIDO}'),
+    ])
+
+
+def banner(alt):
+    return ''.join([variante('t-insideebb', alt, ESTRECHO), variante('t-insideebb-movil', '', ANCHO)])
 
 
 BOTONES = [('https://joelsphere.com', 'b-web', 'joelsphere.com'), ('https://insideebb.com', 'b-insideebb', 'INSIDEEBB'),
@@ -60,7 +75,7 @@ Construyo software que entra en operación: plataformas, agentes de IA e infraes
 ## Hoy
 
 <a href="https://insideebb.com">
-{imagen('t-insideebb', BANNER_ALT, 'width="100%"', 't-insideebb-movil')}
+{banner(BANNER_ALT)}
 </a>
 
 - **[INSIDEEBB](https://insideebb.com), cofundador.** Desarrollo de software, inteligencia artificial aplicada y capacitación de equipos. [Bizzio](https://bizzio.shop) es nuestra plataforma de comercio electrónico con IA.

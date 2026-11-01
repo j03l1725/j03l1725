@@ -1,14 +1,24 @@
 <a href="https://joelsphere.com">
 <picture>
-  <source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce) and (max-width: 640px)" srcset="img/claro/hero-vertical-quieto.webp">
-  <source media="(prefers-color-scheme: dark) and (prefers-reduced-motion: reduce) and (max-width: 640px)" srcset="img/oscuro/hero-vertical-quieto.webp">
-  <source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="img/claro/hero-quieto.webp">
-  <source media="(prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="img/oscuro/hero-quieto.webp">
-  <source media="(prefers-color-scheme: light) and (max-width: 640px)" srcset="img/claro/hero-vertical.webp">
-  <source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="img/oscuro/hero-vertical.webp">
+  <source media="(max-width: 640px), (prefers-reduced-motion: reduce)" srcset="img/nada.png">
   <source media="(prefers-color-scheme: light)" srcset="img/claro/hero.webp">
   <source media="(prefers-color-scheme: dark)" srcset="img/oscuro/hero.webp">
-  <img src="img/oscuro/hero.webp" width="100%" alt="Joel Morales. Lo difícil de la IA es que funcione de verdad. Cofundador de INSIDEEBB. Youth Envoy de la UIT para las Américas.">
+  <img src="img/oscuro/hero.webp"  alt="Joel Morales. Lo difícil de la IA es que funcione de verdad. Cofundador de INSIDEEBB. Youth Envoy de la UIT para las Américas.">
+</picture><picture>
+  <source media="(min-width: 641px), (prefers-reduced-motion: reduce)" srcset="img/nada.png">
+  <source media="(prefers-color-scheme: light)" srcset="img/claro/hero-vertical.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="img/oscuro/hero-vertical.webp">
+  <img src="img/oscuro/hero-vertical.webp"  alt="">
+</picture><picture>
+  <source media="(max-width: 640px), (prefers-reduced-motion: no-preference)" srcset="img/nada.png">
+  <source media="(prefers-color-scheme: light)" srcset="img/claro/hero-quieto.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="img/oscuro/hero-quieto.webp">
+  <img src="img/oscuro/hero-quieto.webp"  alt="">
+</picture><picture>
+  <source media="(min-width: 641px), (prefers-reduced-motion: no-preference)" srcset="img/nada.png">
+  <source media="(prefers-color-scheme: light)" srcset="img/claro/hero-vertical-quieto.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="img/oscuro/hero-vertical-quieto.webp">
+  <img src="img/oscuro/hero-vertical-quieto.webp"  alt="">
 </picture>
 </a>
 
@@ -56,11 +66,15 @@ Construyo software que entra en operación: plataformas, agentes de IA e infraes
 
 <a href="https://insideebb.com">
 <picture>
-  <source media="(prefers-color-scheme: light) and (max-width: 640px)" srcset="img/claro/t-insideebb-movil.webp">
-  <source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="img/oscuro/t-insideebb-movil.webp">
+  <source media="(max-width: 640px)" srcset="img/nada.png">
   <source media="(prefers-color-scheme: light)" srcset="img/claro/t-insideebb.webp">
   <source media="(prefers-color-scheme: dark)" srcset="img/oscuro/t-insideebb.webp">
-  <img src="img/oscuro/t-insideebb.webp" width="100%" alt="INSIDEEBB. Desarrollamos software y capacitamos a los equipos que lo usan. Plataformas, sistemas a medida e inteligencia artificial integrados a la operación de cada empresa.">
+  <img src="img/oscuro/t-insideebb.webp"  alt="INSIDEEBB. Desarrollamos software y capacitamos a los equipos que lo usan. Plataformas, sistemas a medida e inteligencia artificial integrados a la operación de cada empresa.">
+</picture><picture>
+  <source media="(min-width: 641px)" srcset="img/nada.png">
+  <source media="(prefers-color-scheme: light)" srcset="img/claro/t-insideebb-movil.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="img/oscuro/t-insideebb-movil.webp">
+  <img src="img/oscuro/t-insideebb-movil.webp"  alt="">
 </picture>
 </a>
 
