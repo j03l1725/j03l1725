@@ -54,10 +54,10 @@ BOTONES = [('https://joelsphere.com', 'b-joelsphere', 'joelsphere.com'), ('https
            ('https://orcid.org/0009-0009-9661-8529', 'b-orcid', 'ORCID'), (f'mailto:{CORREO}', 'b-correo', f'Correo: {CORREO}')]
 TARJETAS = [('https://bizzio.shop', 't-bizzio', 'Bizzio. Comercio electrónico con IA. Tienda en línea con vendedor virtual y pagos integrados.'),
             (UIT, 't-uit', 'Youth Envoy de la UIT. Generation Connect Américas, 2026-2030.'),
-            ('https://joelsphere.com/escritos/titulacion-campusbot/', 't-campusbot', 'CampusBot-UTI. Asistente virtual sobre la normativa universitaria, en infraestructura propia y evaluado con usuarios reales.'),
-            ('https://doi.org/10.37815/rte.v38nE1.1591', 't-madurez', 'Plataforma de madurez digital. Autodiagnóstico para microemprendimientos, publicado en la Revista Tecnológica ESPOL.'),
-            ('https://joelsphere.com', 't-kuntur', 'KUNTUR. Robot humanoide, primero en performance y tercero en combate en ROBO ONE.'),
-            ('https://joelsphere.com', 't-colmena', 'Colmena. Servidores locales sin internet para comunidades de la Amazonía.')]
+            ('https://joelsphere.com/proyectos/campusbot-uti/', 't-campusbot', 'CampusBot-UTI. Asistente virtual sobre la normativa universitaria, en infraestructura propia y evaluado con usuarios reales.'),
+            ('https://joelsphere.com/proyectos/madurez-digital/', 't-madurez', 'Plataforma de madurez digital. Autodiagnóstico para microemprendimientos, publicado en la Revista Tecnológica ESPOL.'),
+            ('https://joelsphere.com/proyectos/kuntur/', 't-kuntur', 'KUNTUR. Robot humanoide, primero en performance y tercero en combate en ROBO ONE.'),
+            ('https://joelsphere.com/proyectos/colmena/', 't-colmena', 'Colmena. Servidores locales sin internet para comunidades de la Amazonía.')]
 
 botones = '\n'.join(f'<a href="{u}">{imagen(n, a, chr(104) + "eight=" + chr(34) + "42" + chr(34))}</a>' for u, n, a in BOTONES)
 tarjetas = '\n'.join(f'<a href="{u}">{imagen(n, a, "width=" + chr(34) + "414" + chr(34))}</a>' for u, n, a in TARJETAS)
