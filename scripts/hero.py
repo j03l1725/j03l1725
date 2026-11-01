@@ -84,7 +84,7 @@ def main():
 <text class="c" font-size="32" x="88" y="564">{LINEAS[0]}</text>
 <text class="c" font-size="32" x="88" y="608">{LINEAS[1]}</text>"""
         guardar(componer(base(1700, 720, txt, t, 'e'), esc, 924, 0, 70), 'hero')
-        txt = f"""<text class="n" font-size="100" x="48" y="668" letter-spacing="-2.5">{NOMBRE[0]} {NOMBRE[1]}</text>
+        txt = f"""<text class="n" font-size="84" x="48" y="668" letter-spacing="-2">{NOMBRE[0]} {NOMBRE[1]}</text>
 <text class="t" font-size="33" x="50" y="736">{TITULAR}</text>
 <text class="c" font-size="28" x="50" y="796">{LINEAS[0]}</text>
 <text class="c" font-size="28" x="50" y="836">{LINEAS[1]}</text>"""

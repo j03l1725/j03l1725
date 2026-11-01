@@ -21,7 +21,12 @@ Construyo software que entra en operación: plataformas, agentes de IA e infraes
 
 ## Hoy
 
-<a href="https://insideebb.com"><img src="img/t-insideebb.webp" width="100%" alt="INSIDEEBB. Desarrollamos software y capacitamos a los equipos que lo usan. Plataformas, sistemas a medida e inteligencia artificial integrados a la operación de cada empresa."></a>
+<a href="https://insideebb.com">
+<picture>
+  <source media="(max-width: 640px)" srcset="img/t-insideebb-movil.webp">
+  <img src="img/t-insideebb.webp" width="100%" alt="INSIDEEBB. Desarrollamos software y capacitamos a los equipos que lo usan. Plataformas, sistemas a medida e inteligencia artificial integrados a la operación de cada empresa.">
+</picture>
+</a>
 
 - **[INSIDEEBB](https://insideebb.com), cofundador y CTO.** Dirijo el desarrollo de [Bizzio](https://bizzio.shop), nuestra plataforma de comercio electrónico con IA, y diseño y dicto capacitaciones en IA aplicada para equipos de empresa.
 - **[UIT, Generation Connect Américas](https://www.itu.int/generationconnect/generation-connect-americas-youth-envoys-gc-ams-2026-2030/), Youth Envoy 2026-2030.** Represento a Ecuador en el programa de juventud de la agencia de las Naciones Unidas para las tecnologías digitales.

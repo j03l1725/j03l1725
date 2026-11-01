@@ -27,6 +27,11 @@ p{{margin:0;font-size:14px;line-height:1.42;color:#A9B0BE}}
 .bn h2{{position:absolute;left:252px;top:80px;margin:0;width:560px;font-size:27px;line-height:1.14;font-weight:800;letter-spacing:-.4px;color:#fff}}
 .bn p{{position:absolute;left:252px;top:152px;width:540px;font-size:14.5px;color:#CDCAD4}}
 .bn .co{{position:absolute;left:0;top:-3px;height:240px}}
+.bm{{position:relative;width:408px;height:286px;box-sizing:border-box;border:1px solid #2A2F3A;border-radius:14px;background:#0E0D0B;overflow:hidden}}
+.bm .lg{{position:absolute;left:138px;top:46px;height:27px}}
+.bm h2{{position:absolute;left:22px;top:122px;margin:0;width:364px;font-size:24px;line-height:1.14;font-weight:800;letter-spacing:-.3px;color:#fff}}
+.bm p{{position:absolute;left:22px;top:214px;width:364px;font-size:15.5px;color:#CDCAD4}}
+.bm .co{{position:absolute;left:0;top:-3px;height:126px}}
 .bt{{display:inline-flex;align-items:center;gap:8px;height:42px;box-sizing:border-box;padding:0 15px 0 13px;border:1px solid #2A2F3A;border-radius:10px;background:#0A0C11;color:#fff;font-size:14.5px;font-weight:600}}
 .bt svg,.bt img{{width:18px;height:18px;display:block}}
 </style>"""
@@ -46,8 +51,8 @@ TARJETAS = [
     ('t-madurez', foto(f'{PUB}/reciente/2026-10-15-ticec-2026.webp', '0% 30%'), 'Plataforma de madurez digital',
      'Autodiagnóstico para microemprendimientos. Publicada en la Revista Tecnológica ESPOL y expuesta en TICEC 2026.'),
     ('t-kuntur', foto(f'{PUB}/perfil/lugares/quito/4-322e69.webp', '50% 66%'), 'KUNTUR',
-     'Robot humanoide del club que presidí. Primero en performance y tercero en combate en ROBO ONE Ecuador.'),
-    ('t-colmena', foto(f'{PUB}/perfil/lugares/sarayaku/2-da4994.webp', '50% 47%'), 'Colmena',
+     'Robot humanoide del club que presidí. Primero en performance y tercero en combate en ROBO ONE.'),
+    ('t-colmena', foto(f'{PUB}/perfil/lugares/sarayaku/2-da4994.webp', '50% 60%'), 'Colmena',
      'Servidores locales sin internet para comunidades de la Amazonía, con la red de comunicadoras de CORAPE.'),
 ]
 
@@ -78,6 +83,9 @@ def main():
         pieza(t, 't-insideebb', f"""<div class="bn"><img class="co" src="file://{MEDIOS}/cohete.webp"><img class="lg" src="file://{ID}/logo/firma-horizontal/firma-horizontal-blanco.svg">
 <h2>Desarrollamos software y capacitamos a los equipos que lo usan.</h2>
 <p>Plataformas, sistemas a medida e inteligencia artificial integrados a la operación de cada empresa.</p></div>""")
+        pieza(t, 't-insideebb-movil', f"""<div class="bm"><img class="co" src="file://{MEDIOS}/cohete.webp"><img class="lg" src="file://{ID}/logo/firma-horizontal/firma-horizontal-blanco.svg">
+<h2>Desarrollamos software y capacitamos a los equipos que lo usan.</h2>
+<p>Plataformas, sistemas a medida e inteligencia artificial integrados a la operación de cada empresa.</p></div>""", 500, 400)
         for n, est, tit, txt in TARJETAS:
             pieza(t, n, f'<div class="tj"><div class="im" style="{est}"></div><div class="tx"><h3>{tit}</h3><p>{txt}</p></div></div>')
         for i, txt in BOTONES:
