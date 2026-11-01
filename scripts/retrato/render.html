@@ -1,0 +1,68 @@
+<!doctype html><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style>
+<canvas id="c"></canvas>
+<script type="importmap">{"imports":{"three":"/three.module.js"}}</script>
+<script type="module">
+// El retrato de joelsphere (mismos shaders) con tiempo fijado por cuadro y bucle exacto.
+import * as THREE from 'three';
+const q = new URLSearchParams(location.search);
+const W = +q.get('w'), H = +q.get('h'), S = +q.get('s') || 2, T = +q.get('t') || 8;
+const ONDA = q.has('onda') ? +q.get('onda') : 1;
+const CAM = +q.get('cam') || 5.2, DY = +q.get('dy') || 0, DX = +q.get('dx') || 0, BRILLO = +q.get('b') || 1;
+let sem = 1725; const azar = () => { sem |= 0; sem = sem + 0x6D2B79F5 | 0; let t = Math.imul(sem ^ sem >>> 15, 1 | sem); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+const OSCURO = ['#12A4E3', '#9B7BFF', '#FFB320', '#18B26B', '#FF5B47', '#F2509E', '#9EB8DB'];
+const b = await (await fetch('/retrato.bin')).arrayBuffer();
+const [n, m] = new Uint32Array(b, 0, 2);
+const p = new Float32Array(b, 8, n * 4);
+const desde = 8 + n * 16 + n + ((4 - (n % 4)) % 4);
+const aristas = new Uint16Array(b, desde, m * 2);
+const c = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({ canvas: c, antialias: true, alpha: false, preserveDrawingBuffer: true });
+renderer.setPixelRatio(S); renderer.setSize(W, H); renderer.setClearColor(0x000000, 1);
+const escena = new THREE.Scene();
+const camara = new THREE.PerspectiveCamera(30, W / H, 0.1, 40);
+camara.position.set(DX, DY, CAM);
+const busto = new THREE.Group(); escena.add(busto);
+const comun = { uTiempo: { value: 0 }, uDpr: { value: S * (+q.get('dpr') || 1) }, uColores: { value: OSCURO.map((x) => new THREE.Color(x)) } };
+const pos = new Float32Array(n * 3), luz = new Float32Array(n);
+for (let i = 0; i < n; i++) { pos.set([p[i * 4], p[i * 4 + 1], p[i * 4 + 2]], i * 3); luz[i] = p[i * 4 + 3]; }
+const geo = new THREE.BufferGeometry();
+geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+geo.setAttribute('luz', new THREE.BufferAttribute(luz, 1));
+const GLSL = `uniform float uTiempo; uniform vec3 uColores[7];
+  vec3 pal(int k){ vec3 c = uColores[0]; for (int i = 1; i < 7; i++) if (i == k) c = uColores[i]; return c; }
+  vec3 colorDe(vec3 q){ float f = clamp((1.15 - q.y) * 2.1 + q.x * 0.9 + 0.6, 0.0, 5.999); int k = int(floor(f)); float t = fract(f); t = t * t * (3.0 - 2.0 * t); return mix(pal(k), pal(k + 1), t); }
+  // Una onda baja por el busto: 4,2 unidades en una vuelta del bucle.
+  float onda(vec3 q){ float y = 1.4 - mod(uTiempo * (4.2 / ${T.toFixed(3)}), 4.2); return exp(-pow((q.y - y) * 3.2, 2.0)); }`;
+const matP = new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, uniforms: { ...comun },
+  vertexShader: `${GLSL} uniform float uDpr; attribute float luz; varying vec3 vColor; varying float vAlfa;
+    void main(){ vec4 mv = modelViewMatrix * vec4(position, 1.0); float act = onda(position); float tono = luz;
+      vColor = mix(colorDe(position), vec3(1.0), act * ${(0.3 * ONDA).toFixed(3)} + tono * tono * 0.3);
+      vAlfa = (0.1 + 0.9 * tono * tono) * (0.8 + act * ${(0.6 * ONDA).toFixed(3)});
+      gl_PointSize = (1.0 + 2.2 * tono + act * ${(1.2 * ONDA).toFixed(3)}) * uDpr * (5.2 / -mv.z);
+      gl_Position = projectionMatrix * mv; }`,
+  fragmentShader: `varying vec3 vColor; varying float vAlfa;
+    void main(){ vec2 c = gl_PointCoord - 0.5; float d = length(c); if (d > 0.5) discard; float a = 1.0 - smoothstep(0.1, 0.5, d); gl_FragColor = vec4(vColor, a * vAlfa * ${(0.95 * BRILLO).toFixed(3)}); }` });
+busto.add(new THREE.Points(geo, matP));
+const lp = new Float32Array(m * 6), lt = new Float32Array(m * 2), lf = new Float32Array(m * 2);
+for (let e = 0; e < m; e++) { const a = aristas[e * 2], d = aristas[e * 2 + 1];
+  lp.set(pos.subarray(a * 3, a * 3 + 3), e * 6); lp.set(pos.subarray(d * 3, d * 3 + 3), e * 6 + 3);
+  lt[e * 2] = 0; lt[e * 2 + 1] = 1; const f = azar() < 0.35 ? azar() : -1; lf[e * 2] = lf[e * 2 + 1] = f; }
+const geoL = new THREE.BufferGeometry();
+geoL.setAttribute('position', new THREE.BufferAttribute(lp, 3));
+geoL.setAttribute('t', new THREE.BufferAttribute(lt, 1)); geoL.setAttribute('fase', new THREE.BufferAttribute(lf, 1));
+const matL = new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, uniforms: { ...comun },
+  vertexShader: `${GLSL} attribute float t; attribute float fase; varying vec3 vColor; varying float vT; varying float vFase; varying float vAct;
+    void main(){ vColor = colorDe(position); vT = t; vFase = fase; vAct = onda(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`,
+  fragmentShader: `uniform float uTiempo; varying vec3 vColor; varying float vT; varying float vFase; varying float vAct;
+    void main(){ float base = 0.1 + vAct * 0.28; float senal = 0.0;
+      // Las señales dan cinco vueltas por bucle: así el último cuadro empalma con el primero.
+      if (vFase >= 0.0) { float p = fract(uTiempo * (5.0 / ${T.toFixed(3)}) + vFase); float d = vT - p; senal = exp(-d * d * 60.0); }
+      gl_FragColor = vec4(mix(vColor, vec3(1.0), senal * 0.5), base + senal * 0.9); }` });
+busto.add(new THREE.LineSegments(geoL, matL));
+const AY = +q.get('ay') || 0.32, AX = +q.get('ax') || 0.05;
+window.dibujar = (f, total) => { const u = f / total, t = u * T;
+  comun.uTiempo.value = t;
+  busto.rotation.y = AY * Math.sin(2 * Math.PI * u); busto.rotation.x = AX * Math.cos(2 * Math.PI * u);
+  renderer.render(escena, camara); return c.toDataURL('image/png'); };
+window.listo = { n, m };
+</script>
