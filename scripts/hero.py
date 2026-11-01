@@ -52,7 +52,7 @@ def base(w, h, texto, tmp, nombre):
     return np.asarray(Image.open(p).convert('RGBA'), dtype=np.float32)
 
 
-def componer(bas, carpeta, x, y, rampa):
+def componer(bas, carpeta, x, y, rampa, abajo=0):
     """Suma cada cuadro del retrato sobre la base. Es la misma mezcla aditiva del sitio: el negro no añade nada, sin halo."""
     fs = sorted(glob.glob(f'{carpeta}/*.png')); salida = []
     for f in fs:
@@ -60,6 +60,8 @@ def componer(bas, carpeta, x, y, rampa):
         h, w = a.shape[:2]; m = np.ones((h, w, 1), dtype=np.float32)
         if rampa:
             m[:, :rampa, 0] *= np.linspace(0, 1, rampa)[None, :]
+        if abajo:
+            m[-abajo:, :, 0] *= np.linspace(1, 0, abajo)[:, None]
         o = bas.copy(); r = o[y:y + h, x:x + w]
         r[..., :3] = np.clip(r[..., :3] + a * m * (r[..., 3:] > 200), 0, 255)
         # El borde del cuadro se mantiene encima del retrato.
@@ -88,7 +90,7 @@ def main():
 <text class="t" font-size="33" x="50" y="736">{TITULAR}</text>
 <text class="c" font-size="28" x="50" y="796">{LINEAS[0]}</text>
 <text class="c" font-size="28" x="50" y="836">{LINEAS[1]}</text>"""
-        guardar(componer(base(800, 880, txt, t, 'm'), mov, 0, 0, 0), 'hero-movil')
+        guardar(componer(base(800, 880, txt, t, 'm'), mov, 0, 0, 0, 130), 'hero-vertical')
 
 
 main()

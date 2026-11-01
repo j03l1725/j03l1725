@@ -1,8 +1,8 @@
 <a href="https://joelsphere.com">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 640px)" srcset="img/hero-movil-quieto.webp">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 640px)" srcset="img/hero-vertical-quieto.webp">
   <source media="(prefers-reduced-motion: reduce)" srcset="img/hero-quieto.webp">
-  <source media="(max-width: 640px)" srcset="img/hero-movil.webp">
+  <source media="(max-width: 640px)" srcset="img/hero-vertical.webp">
   <img src="img/hero.webp" width="100%" alt="Joel Morales. Lo difícil de la IA es que funcione de verdad. Cofundador y CTO de INSIDEEBB. Youth Envoy de la UIT para las Américas.">
 </picture>
 </a>
